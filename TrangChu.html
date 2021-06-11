@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>IUH - Trường đại học công nghiệp TP.HCM</title>
+<link rel="icon" href="image/sv_logo_dashboard.png" />
+<!-- <script src="js/jquery.js"></script> -->
+<script type="text/javascript" src="js/function.js" ></script>
+<!-- <script type="text/javascript" src="js/bootstrap.min.js"></script -->
+<link rel="stylesheet" href="css/style.css">
+<!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/font.css">
+</head>
+<body>
+<div class="dautrang">
+    <div><a href="TrangChu.html"> <img src="image/sv_logo_dashboard.png" width="200" height="78"></a></div>
+    <b><div class="abc">ĐOÀN THANH NIÊN THÀNH PHỐ HỒ CHÍ MINH</div> 
+       <div class="xyz">ĐOÀN THANH NIÊN TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THÀNH PHỐ HỒ CHÍ MINH</div></b>
+</div>
+<div class="topnav" id="myTopnav">
+  <a href="TrangChu.html" class="active">TRANG CHỦ</a>
+  <a href="#">ĐOÀN THỂ</a>
+  <a href="#">SỰ KIỆN</a>
+  <div class="dropdown">
+    <option onclick="nuttha();" class="dropbtn">HOẠT ĐỘNG</option>
+    <div id="myDropdown" class="noidungthanh">
+    <div><a id="myBtn">ĐĂNG KÝ</a>
+    <div id="myModal" class="modal">
+    <div class="modal-content" >
+    <div class="form">
+    <div class="form-panel one">
+    <form id="dauvao" name="frm" method="POST">
+      <div class="form-header">
+        <span class="close">&times;</span>
+        <center><h1>THÔNG TIN ĐĂNG KÝ</h1></center>
+        <p id="text">CẢNH BÁO! Bạn đang bật nút Caps look.</p>
+        <hr  width="100%" size="3px" align="center" color="#E6E6E6" />
+      </br>
+      </div>
+        <div class="form-group">
+          <b><label for="number">Mã Sinh Viên</label></b>
+          <input type="number" id="msv" name="gioihan1" onkeyup="return muoikytu1();"  placeholder="Mã Sinh Viên" required="required"/>
+          <b style="color: red;">*</b>
+          <i><b style="color: red;" id="test"></b></i>
+        </div>
+        <div class="form-group">
+          <b><label for="username">Họ Tên</label></b>
+          <input type="text" id="chuhoa" placeholder="Họ Tên"required="required"/>
+          <b style="color: red;">*</b>
+        </div>
+        <div class="form-group">
+            <b><label for="username">Ngày Tham Gia</label></b>
+            <input type="date" required="required">
+            <b style="color: red;">*</b>
+        </div>
+        <div class="form-group">
+            <b><label for="email">Email</label></b>
+            <input type="email" id="email" placeholder="Địa Chỉ Email" onmouseleave="checkEmail();" onkeydown="checkEmail();" required="required"/>
+            <b style="color: red;">*</b>
+            <i><b style="color: red; text-align: left;" id="check"></b></i>
+        </div>
+        <div class="form-group">
+            <b><label for="number">Số điện thoại</label></b>
+            <input type="number" name="gioihan2" onkeyup="return muoikytu2();" placeholder="Số Điện Thoại" required="required"/>
+            <b style="color: red;">*</b>
+            <i><b style="color: red; text-align: left;" id="test2"></b></i>
+        </div>
+        <div class="form-group">
+          <button type="submit">Lưu</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+      <a href="#">THAM GIA</a>
+    </div>
+  </div>
+  </div> 
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+</div>
+<div class="nnno">
+  <div class="noidung">
+    <img style="border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;" src="image/ngayhoithanhnien.JPG">
+  </div>
+  
+  <div class="noidung2">
+    <h2 style="color: #D5545D; font-size: 28px;">TIN NỔI BẬT</h2>
+  <div class="notes">
+    <ol type="I" class="ghichu">
+        <li>Mùa hè xanh</li>  
+        <li>Thanh Niên Tình Nguyện</li>  
+        <li>Tấm lòng vàng</li>  
+        <li>Hiến máu Nhân đạo</li>  
+        <li>Bảo vệ Môi trường sạch</li>  
+        <li>Thi Đua Lập thành tích chào mừng 26/3</li>  
+    </ol>
+       </div>
+  </div>
+</div>
+<center><h1 style="color:#D5545D;">DANH SÁCH ĐĂNG KÝ HOẶT ĐỘNG MÙA HÈ XANH</h1></center>
+<div style="overflow-x:auto;"></div>
+<table id="hieuung">
+    <tr>
+        <td>STT</td>
+        <td>Mã SV</td>
+        <td>Tên SV</td>
+        <td>Ngày Tham Gia</td>
+        <td>Email</td>
+        <td>số điện thoại</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>1234567890</td>
+        <td>THAI TRI CUONG</td>
+        <td>2021-06-05</td>
+        <td>cuong@iuh.edu.vn</td>
+        <td>7894561230</td>
+      </tr>
+</table>
+
+</body>
+<div class="footer">
+  <p>© 2020 - 2021 Đoàn thanh niên - trường đại học Công nghiệp thành phố Hồ Chí Minh.</p>
+</div> 
+<script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+// nút cảnh báo capslock bật
+var input = document.getElementById("dauvao");
+var text = document.getElementById("text");
+input.addEventListener("keyup", function(event) {
+
+if (event.getModifierState("CapsLock")) {
+    text.style.display = "block";
+  } else {
+    text.style.display = "none"
+  }
+});
+</script>
+</html>
